@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen bg-slate-100 flex items-center justify-center px-4 py-10">
+  <div class="max-w-6xl w-full bg-white/95 shadow-2xl rounded-[32px] overflow-hidden backdrop-blur-xl border border-slate-200">
+    <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr]">
+      <div class="relative bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1200&q=80'); min-height:520px;">
+        <div class="absolute inset-0 bg-slate-950/75"></div>
+        <div class="absolute inset-x-0 bottom-0 p-10 text-white">
+          <p class="text-4xl font-semibold tracking-tight drop-shadow-lg">Smart Café</p>
+          <p class="mt-4 max-w-xs text-sm leading-7 text-slate-200 drop-shadow-lg">
+            Experience the art of modern dining. Your journey into culinary excellence begins with a seat at our table.
+          </p>
+        </div>
+      </div>
+      <div class="p-8 md:p-12">
+        <div class="max-w-xl mx-auto">
+          <p class="text-base text-slate-500 uppercase tracking-[0.35em] font-semibold">Create Account</p>
+          <p class="mt-3 text-slate-500">Reserve your place in our community of flavor enthusiasts.</p>
+
+          <form class="mt-8 space-y-6">
+            <div class="grid gap-4 sm:grid-cols-2">
+              <label class="block">
+                <span class="text-xs font-semibold tracking-[0.18em] text-slate-500 uppercase">Full Name</span>
+                <input type="text" placeholder="Abishek Niroula" class="mt-2 w-full rounded-2xl border border-slate-200 bg-slate-100 px-4 py-3 text-sm text-slate-700 outline-none transition focus:border-amber-500 focus:ring-2 focus:ring-amber-100" />
+              </label>
+              <label class="block">
+                <span class="text-xs font-semibold tracking-[0.18em] text-slate-500 uppercase">Email Address</span>
+                <input type="email" placeholder="abishek@gmail.com" class="mt-2 w-full rounded-2xl border border-slate-200 bg-slate-100 px-4 py-3 text-sm text-slate-700 outline-none transition focus:border-amber-500 focus:ring-2 focus:ring-amber-100" />
+              </label>
+            </div>
+
+            <label class="block">
+              <span class="text-xs font-semibold tracking-[0.18em] text-slate-500 uppercase">Phone Number</span>
+              <input type="tel" placeholder="+977-9825342534" class="mt-2 w-full rounded-2xl border border-slate-200 bg-slate-100 px-4 py-3 text-sm text-slate-700 outline-none transition focus:border-amber-500 focus:ring-2 focus:ring-amber-100" />
+            </label>
+
+            <div class="grid gap-4 sm:grid-cols-2">
+              <label class="block">
+                <span class="text-xs font-semibold tracking-[0.18em] text-slate-500 uppercase">Password</span>
+                <input type="password" placeholder="••••••••" class="mt-2 w-full rounded-2xl border border-slate-200 bg-slate-100 px-4 py-3 text-sm text-slate-700 outline-none transition focus:border-amber-500 focus:ring-2 focus:ring-amber-100" />
+              </label>
+              <label class="block">
+                <span class="text-xs font-semibold tracking-[0.18em] text-slate-500 uppercase">Confirm Password</span>
+                <input type="password" placeholder="••••••••" class="mt-2 w-full rounded-2xl border border-slate-200 bg-slate-100 px-4 py-3 text-sm text-slate-700 outline-none transition focus:border-amber-500 focus:ring-2 focus:ring-amber-100" />
+              </label>
+            </div>
+
+            <div class="rounded-3xl border border-emerald-200 bg-emerald-50 p-5">
+              <label class="flex items-start gap-4">
+                <span class="mt-1 h-5 w-5 shrink-0 rounded-lg border border-slate-300 bg-white shadow-sm"></span>
+                <div>
+                  <p class="font-semibold text-slate-900">Become a Gokyo Member</p>
+                  <p class="mt-1 text-sm leading-6 text-slate-600">Unlock priority bookings, seasonal tasting invites, and 10% back on every dinner service.</p>
+                </div>
+              </label>
+            </div>
+
+            <button type="submit" class="mt-3 w-full rounded-2xl bg-amber-700 px-6 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-lg shadow-amber-200/30 transition hover:bg-amber-800">
+              Create Account
+            </button>
+          </form>
+
+          <p class="mt-6 text-center text-sm text-slate-500">Already have an account? <a href="#" class="font-semibold text-slate-900 hover:text-amber-700">Log in here</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
