@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gokyo Bistro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS Configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            boxShadow: {
+              card: '0 28px 90px rgba(15, 23, 42, 0.12)',
+            },
+            fontFamily: {
+              display: ['Inter', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <!-- Body Content -->
+  <body class="bg-[#f7f2eb] text-slate-900 antialiased">
+    <!-- Header -->
+    <header class="sticky top-0 z-30 border-b border-slate-200/70 bg-white/85 backdrop-blur-sm">
+
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4">
+        <a href="#home" class="text-xl font-semibold tracking-tight text-slate-900">Gokyo Bistro</a>
+        <!-- navbar -->
+        <nav class="hidden items-center gap-8 text-sm text-slate-600 md:flex" aria-label="Primary navigation">
+          <a href="home.html" class="transition hover:text-slate-900">Home</a>
+          <a href="menu.html" class="transition hover:text-slate-900">Menu</a>
+          <a href="offer.html" class="transition hover:text-slate-900">Offers</a>
+          <a href="contact.html" class="transition hover:text-slate-900">Contact</a>
+        </nav>
+
+        <!-- other content -->
+        <div class="flex items-center gap-3">
+          <button class="hidden rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm text-slate-700 transition hover:bg-slate-100 md:inline-flex">Search</button>
+          <button class="hidden rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm text-slate-700 transition hover:bg-slate-100 md:inline-flex">Cart</button>
+          <a href="book.html" class="rounded-full bg-[#8c4a2f] px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-[#8c4a2f]/20 transition hover:bg-[#9e562c]">Book Table</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- main content -->
+    <main>
+      <!-- Home Section -->
+      <section id="home" class="overflow-hidden px-6 py-16 sm:px-8 lg:px-10">
+        <div class="mx-auto max-w-7xl">
+          <div class="grid gap-12 xl:grid-cols-[1.05fr_0.95fr] xl:items-center">
+
+            <div class="max-w-2xl">
+              <p class="text-xs uppercase tracking-[0.36em] text-[#8c4a2f]">Since 1994</p>
+              <h1 class="mt-6 text-5xl font-semibold tracking-tight text-slate-950 sm:text-6xl">
+                The Art of <span class="text-[#8c4a2f]">Cafe Dining</span>
+              </h1>
+              <p class="mt-6 max-w-xl text-lg leading-8 text-slate-700">
+                Experience asthetic-inspired culinary precision meet modern asthetic elegance. From terraced gardens to your dining room, every plate is made with care.
+              </p>
+
+              <div class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+                <a href="book.html" class="inline-flex w-full items-center justify-center rounded-full bg-[#8c4a2f] px-7 py-3 text-sm font-semibold text-white transition hover:bg-[#9e562c] sm:w-auto">Book Now</a>
+                <a href="menu.html" class="inline-flex w-full items-center justify-center rounded-full border border-slate-300 bg-[#e7f0e7] px-7 py-3 text-sm font-semibold text-slate-900 transition hover:bg-[#d5e6d5] sm:w-auto">Order Food</a>
+              </div>
+            </div>
+
+            <div class="relative mx-auto w-full max-w-xl overflow-hidden rounded-[2rem] bg-slate-950 shadow-card">
+              <img
+                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
+                alt="Restaurant dish"
+                class="h-full w-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+
+              <div class="absolute left-6 bottom-6 w-[calc(100%-3rem)] max-w-[22rem] rounded-[1.75rem] border border-white/20 bg-white/95 p-5 shadow-lg backdrop-blur-sm">
+                <div class="flex items-center gap-2 text-[#b45309]">
+                  <span class="text-sm font-semibold">★★★★★</span>
+                </div>
+                <p class="mt-3 text-sm leading-6 text-slate-700">
+                  “The most authentic Nepali flavors I’ve tasted inside Nepal.”
+                </p>
+                <p class="mt-4 text-xs uppercase tracking-[0.3em] text-slate-500">— The Gastronomer</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Menu Section -->
+      <section id="menu" class="bg-[#fff9f3] px-6 py-16 sm:px-8 lg:px-10">
+        <div class="mx-auto max-w-7xl">
+          <div class="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p class="text-xs uppercase tracking-[0.36em] text-slate-500">Chef’s Selection</p>
+              <h2 class="mt-3 text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl">Today’s Specials</h2>
+            </div>
+            <a href="contact.html" class="inline-flex items-center gap-2 text-sm font-semibold text-[#8c4a2f] transition hover:text-[#9e562c]">
+              View Full Menu
+              <svg viewBox="0 0 16 16" class="h-4 w-4" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M6.72 3.22a.75.75 0 0 1 1.06 0l3.5 3.5a.75.75 0 0 1 0 1.06l-3.5 3.5a.75.75 0 1 1-1.06-1.06L9.44 8 6.72 5.28a.75.75 0 0 1 0-1.06z" clip-rule="evenodd"/></svg>
+            </a>
+          </div>
+
+          <div class="grid gap-6 xl:grid-cols-3">
+
+            <article class="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-card">
+              <span class="inline-flex rounded-full bg-[#8c4a2f]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#8c4a2f]">Limited</span>
+              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Kathmandu Bone Broth" class="mt-6 h-72 w-full rounded-[1.5rem] object-cover" />
+              <h3 class="mt-6 text-xl font-semibold text-slate-950">Salad with Chicken/Beef</h3>
+              <p class="mt-3 text-sm leading-6 text-slate-600">Slow-simmered for 24 hours with local herbs and marrow.</p>
+              <div class="mt-6 flex items-center justify-between text-sm font-semibold text-slate-900">
+                <span>Rs. 250</span>
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-slate-100 text-slate-700">+</span>
+              </div>
+            </article>
+
+            <article class="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-card">
+              <span class="inline-flex rounded-full bg-[#8c4a2f]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#8c4a2f]">Popular</span>
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Heritage Momo Flight" class="mt-6 h-72 w-full rounded-[1.5rem] object-cover" />
+              <h3 class="mt-6 text-xl font-semibold text-slate-950">Beef Steak with Veggies</h3>
+              <p class="mt-3 text-sm leading-6 text-slate-600">A curated selection of beef and vegetable.</p>
+              <div class="mt-6 flex items-center justify-between text-sm font-semibold text-slate-900">
+                <span>Rs. 350</span>
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-slate-100 text-slate-700">+</span>
+              </div>
+            </article>
+
+            <article class="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-card">
+              <span class="inline-flex rounded-full bg-[#8c4a2f]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#8c4a2f]">Seasonal</span>
+              <img src="https://images.unsplash.com/photo-1548943487-a2e4d8f6c821?auto=format&fit=crop&w=800&q=80" alt="Veg Biryani" class="mt-6 h-72 w-full rounded-[1.5rem] object-cover" />
+              <h3 class="mt-6 text-xl font-semibold text-slate-950">Veg Biryani with Khuwas</h3>
+              <p class="mt-3 text-sm leading-6 text-slate-600">Seasonal harvest roasted with Himalayan rock salt and saffron.</p>
+              <div class="mt-6 flex items-center justify-between text-sm font-semibold text-slate-900">
+                <span>Rs. 210</span>
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-slate-100 text-slate-700">+</span>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="px-6 py-16 sm:px-8 lg:px-10">
+        <div class="mx-auto max-w-7xl">
+          <div class="grid gap-8 xl:grid-cols-[1.1fr_0.9fr] xl:items-start">
+            <div class="grid gap-6">
+              <article class="relative overflow-hidden rounded-[2rem] bg-slate-950 shadow-card">
+                <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1200&q=80" alt="Indoor Elegance" class="h-80 w-full object-cover" />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent"></div>
+                <div class="absolute inset-x-6 bottom-6 rounded-[1.5rem] border border-white/15 bg-white/10 p-6 backdrop-blur-sm text-white">
+                  <p class="text-xs uppercase tracking-[0.3em] text-slate-200/80">Indoor Elegance</p>
+                  <h3 class="mt-3 text-2xl font-semibold">Indoor Elegance</h3>
+                  <p class="mt-4 max-w-md text-sm leading-6 text-slate-100/90">Enjoy our fireside lounge and curated ambient soundscape.</p>
+                  <a href="#book" class="mt-6 inline-flex rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/20">Explore the Space</a>
+                </div>
+              </article>
+
+              <article class="relative overflow-hidden rounded-[2rem] bg-slate-950 shadow-card">
+                <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=1200&q=80" alt="Outdoor Terrace" class="h-80 w-full object-cover" />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent"></div>
+                <div class="absolute inset-x-6 bottom-6 rounded-[1.5rem] border border-white/15 bg-white/10 p-6 backdrop-blur-sm text-white">
+                  <p class="text-xs uppercase tracking-[0.3em] text-slate-200/80">Outdoor Terrace</p>
+                  <h3 class="mt-3 text-2xl font-semibold">Outdoor Terrace</h3>
+                  <p class="mt-4 max-w-md text-sm leading-6 text-slate-100/90">Al-fresco dining with panoramic views and heated seating.</p>
+                  <a href="#book" class="mt-6 inline-flex rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/20">Reserve a Spot</a>
+                </div>
+              </article>
+            </div>
+
+            <aside class="rounded-[2rem] border border-slate-200 bg-white p-10 shadow-card">
+              <p class="text-xs uppercase tracking-[0.36em] text-[#8c4a2f]">Bistro Experience</p>
+              <h2 class="mt-4 text-4xl font-semibold tracking-tight text-slate-950">Dine In or Stay In.</h2>
+              <p class="mt-5 text-base leading-7 text-slate-600">
+                Our carefully curated dining experience brings exceptional meals to every atmosphere, from cozy indoor tables to scenic outdoor seating.
+              </p>
+
+              <div class="mt-10 space-y-4">
+                <div class="flex gap-4 rounded-[1.75rem] border border-slate-200 bg-slate-50 p-5">
+                  <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#d7ead9] text-[#317a3a]">🍽</div>
+                  <div>
+                    <p class="font-semibold text-slate-950">Home Delivery</p>
+                    <p class="mt-2 text-sm leading-6 text-slate-600">Our signature packaging ensures your meal arrives with the same precision and temperature as in our kitchen.</p>
+                  </div>
+                </div>
+                <div class="flex gap-4 rounded-[1.75rem] border border-slate-200 bg-slate-50 p-5">
+                  <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#d7ead9] text-[#317a3a]">🎉</div>
+                  <div>
+                    <p class="font-semibold text-slate-950">Private Events</p>
+                    <p class="mt-2 text-sm leading-6 text-slate-600">Tailored menus and dedicated staff for your special celebrations.</p>
+                  </div>
+                </div>
+                <div class="flex gap-4 rounded-[1.75rem] border border-slate-200 bg-slate-50 p-5">
+                  <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#d7ead9] text-[#317a3a]">⭐</div>
+                  <div>
+                    <p class="font-semibold text-slate-950">Member Privileges</p>
+                    <p class="mt-2 text-sm leading-6 text-slate-600">Join the Gokyo Collective for priority booking, exclusive tasting events, and zero delivery fees.</p>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer id="contact" class="border-t border-slate-200 bg-white px-6 py-12 sm:px-8 lg:px-10">
+      <div class="mx-auto grid max-w-7xl gap-10 md:grid-cols-4">
+        <div class="space-y-4">
+          <p class="text-xl font-semibold text-slate-950">Gokyo Bistro</p>
+          <p class="text-sm leading-6 text-slate-600">Curating high-end Himalayan culinary journeys since 1994. Every plate is a story, every spice a memory.</p>
+          <p class="text-sm text-slate-500">New Baneshwor, Kathmandu</p>
+        </div>
+
+        <div class="space-y-3 text-sm text-slate-600">
+          <p class="font-semibold uppercase tracking-[0.3em] text-slate-900">Company</p>
+          <a href="contact.html" class="block hover:text-slate-900">Contact Us</a>
+          <a href="#privacy" class="block hover:text-slate-900">Privacy Policy</a>
+          <a href="#terms" class="block hover:text-slate-900">Terms of Service</a>
+          <a href="#sustainability" class="block hover:text-slate-900">Sustainability</a>
+        </div>
+
+        <div class="space-y-3 text-sm text-slate-600">
+          <p class="font-semibold uppercase tracking-[0.3em] text-slate-900">Experience</p>
+          <a href="#story" class="block hover:text-slate-900">Our Story</a>
+          <a href="#giftcards" class="block hover:text-slate-900">Gift Cards</a>
+          <a href="#careers" class="block hover:text-slate-900">Careers</a>
+          <a href="#locations" class="block hover:text-slate-900">Locations</a>
+        </div>
+
+        <div class="space-y-4">
+          <p class="font-semibold uppercase tracking-[0.3em] text-slate-900">Newsletter</p>
+          <p class="text-sm leading-6 text-slate-600">Subscribe for tasting event invites.</p>
+          <form class="flex flex-col gap-3 sm:flex-row">
+            <input type="email" placeholder="Email Address" class="w-full rounded-full border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none focus:border-[#8c4a2f] focus:ring-2 focus:ring-[#8c4a2f]/20" />
+            <button type="submit" class="rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800">Join</button>
+          </form>
+        </div>
+
+      </div>
+      <div class="mt-10 border-t border-slate-200 pt-6 text-sm text-slate-500">
+        © 2026 Gokyo Bistro. The Modern Resto.
+      </div>
+    </footer>
+  </body>
+</html>
