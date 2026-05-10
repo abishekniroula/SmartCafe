@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Café | Admin Dashboard</title>
+    <link rel="stylesheet" href="Admin.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h1>Smart Café</h1>
+            <p>Admin Portal</p>
+        </div>
+
+        <ul class="nav-links">
+            <li class="nav-item">
+                <a href="#" class="nav-link active">
+                    <i data-lucide="layout-dashboard"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="management.html" class="nav-link">
+                    <i data-lucide="utensils"></i>
+                    Menu Management
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="report.html" class="nav-link">
+                    <i data-lucide="bar-chart-3"></i>
+                    Reports
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="offer.html" class="nav-link">
+                    <i data-lucide="tag"></i>
+                    Offers
+                </a>
+            </li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <div class="admin-profile">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop" alt="Admin" class="admin-avatar">
+                <div class="admin-info">
+                    <h4>Admin Profile</h4>
+                    <p>Superadmin</p>
+                </div>
+            </div>
+            <div class="bottom-actions">
+                <a href="#" class="bottom-link">
+                    <i data-lucide="settings"></i>
+                    Settings
+                </a>
+                <a href="#" class="bottom-link">
+                    <i data-lucide="log-out"></i>
+                    Logout
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="header">
+            <div class="header-title">
+                <h2>Welcome Back,</h2>
+            </div>
+            <div class="header-meta">
+                <div class="header-info">
+                    <span class="date">March 24, 2026</span>
+                    <span class="status">Service Status: Active <span class="status-indicator"></span></span>
+                </div>
+                <div class="notification-bell">
+                    <i data-lucide="bell"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Stats Overview -->
+        <section class="stats-grid">
+            <div class="card card-sales">
+                <span class="card-label">Total Sales</span>
+                <h2 class="card-value">Rs. 14,280</h2>
+                <div class="card-trend">
+                    <i data-lucide="trending-up" class="trend-up"></i>
+                    <span>+12.5% from yesterday</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <i data-lucide="calendar" class="card-icon"></i>
+                <span class="card-label">Reservations</span>
+                <h2 class="card-value">42</h2>
+                <p class="card-subtext">Confirmed Today</p>
+            </div>
+
+            <div class="card">
+                <i data-lucide="clipboard-list" class="card-icon"></i>
+                <span class="card-label">Pending Orders</span>
+                <h2 class="card-value">18</h2>
+                <p class="card-subtext">Requires Attention</p>
+            </div>
+        </section>
+
+        <!-- Middle Section -->
+        <section class="middle-grid">
+            <div class="card volume-card">
+                <div class="volume-header">
+                    <h3>Order Volume</h3>
+                    <div class="toggle-group">
+                        <button class="toggle-btn active">Hourly</button>
+                        <button class="toggle-btn">Daily</button>
+                    </div>
+                </div>
+                <div class="chart-placeholder">
+                    <!-- SVG Chart Representation -->
+                    <svg viewBox="0 0 800 200" style="width: 100%; height: 100%;">
+                        <!-- Grid Lines -->
+                        <line x1="0" y1="180" x2="800" y2="180" stroke="#f0f0f0" stroke-width="1" />
+                        
+                        <!-- Line 1 (Red) -->
+                        <path d="M0,120 L50,130 L100,100 L150,110 L200,80 L250,90 L300,70 L350,60 L400,80 L450,40 L500,50 L550,30 L600,40 L650,20 L700,50 L750,30" 
+                              fill="none" stroke="#e74c3c" stroke-width="2" stroke-linejoin="round" />
+                        
+                        <!-- Line 2 (Blue) -->
+                        <path d="M0,140 L50,120 L100,130 L150,120 L200,140 L250,130 L300,150 L350,140 L400,160 L450,150 L500,170 L550,160 L600,180" 
+                              fill="none" stroke="#3498db" stroke-width="2" stroke-linejoin="round" />
+                        
+                        <!-- Line 3 (Dark Blue) -->
+                        <path d="M0,160 L50,170 L100,150 L150,160 L200,180 L250,170 L300,190 L350,180" 
+                              fill="none" stroke="#2c3e50" stroke-width="2" stroke-linejoin="round" />
+                        
+                        <!-- Line 4 (Orange) -->
+                        <path d="M50,180 L100,175 L150,170 L200,160 L250,150 L300,130 L350,140 L400,120 L450,130 L500,110 L550,120 L600,100" 
+                              fill="none" stroke="#e67e22" stroke-width="2" stroke-linejoin="round" />
+
+                        <!-- X-Axis Labels -->
+                        <text x="10" y="195" font-size="10" fill="#999">MORNING SHIFT</text>
+                        <text x="350" y="195" font-size="10" fill="#999">LUNCH PEAK</text>
+                        <text x="700" y="195" font-size="10" fill="#999">EVENING SERVICE</text>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="side-panel">
+                <span class="card-label">Quick Links</span>
+                <div class="quick-links-group">
+                    <a href="#" class="link-item">
+                        <div class="link-content">
+                            <div class="link-icon-box"><i data-lucide="plus-circle"></i></div>
+                            <span>Add Menu</span>
+                        </div>
+                        <i data-lucide="chevron-right"></i>
+                    </a>
+                    <a href="#" class="link-item">
+                        <div class="link-content">
+                            <div class="link-icon-box"><i data-lucide="package"></i></div>
+                            <span>Manage Orders</span>
+                        </div>
+                        <i data-lucide="chevron-right"></i>
+                    </a>
+                    <a href="#" class="link-item">
+                        <div class="link-content">
+                            <div class="link-icon-box"><i data-lucide="file-text"></i></div>
+                            <span>View Reports</span>
+                        </div>
+                        <i data-lucide="chevron-right"></i>
+                    </a>
+                </div>
+
+                <div class="card kitchen-pulse">
+                    <span class="card-label">Kitchen Pulse</span>
+                    <div class="pulse-header">
+                        <div class="pulse-dot"></div>
+                        <h4>Service Optimized</h4>
+                    </div>
+                    <p class="pulse-desc">Wait times are currently averaging 12 minutes per course.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Tables Section -->
+        <section class="tables-section">
+            <h3 class="section-title">Today's Featured Tables</h3>
+            <div class="tables-grid">
+                <!-- Table Card 1 -->
+                <div class="card table-card">
+                    <div class="table-number">
+                        <label>Table</label>
+                        <span>12</span>
+                    </div>
+                    <div class="table-details">
+                        <div class="table-row-top">
+                            <div class="table-info">
+                                <h4>Reservation: Miller</h4>
+                                <p>4 Guests • 7:30 PM</p>
+                            </div>
+                            <span class="badge badge-seated">Seated</span>
+                        </div>
+                        <div class="table-row-bottom">
+                            <span class="table-price">Rs. 3420</span>
+                            <a href="#" class="table-action">View Ticket</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Table Card 2 -->
+                <div class="card table-card">
+                    <div class="table-number pink">
+                        <label>Table</label>
+                        <span>04</span>
+                    </div>
+                    <div class="table-details">
+                        <div class="table-row-top">
+                            <div class="table-info">
+                                <h4>Reservation: Chen</h4>
+                                <p>2 Guests • 8:15 PM</p>
+                            </div>
+                            <span class="badge badge-pending">Pending</span>
+                        </div>
+                        <div class="table-row-bottom">
+                            <span class="table-price">Rs. 1205</span>
+                            <a href="#" class="table-action">Check-In</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Table Card 3 -->
+                <div class="card table-card">
+                    <div class="table-number">
+                        <label>Table</label>
+                        <span>21</span>
+                    </div>
+                    <div class="table-details">
+                        <div class="table-row-top">
+                            <div class="table-info">
+                                <h4>Walk-in: Anonymous</h4>
+                                <p>2 Guests • 7:00 PM</p>
+                            </div>
+                            <span class="badge badge-appetizers">Appetizers</span>
+                        </div>
+                        <div class="table-row-bottom">
+                            <span class="table-price">Rs. 890</span>
+                            <a href="#" class="table-action">Update Status</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Smart Café. The Modern Restro</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <span class="footer-brand">Smart Café</span>
+        </footer>
+    </main>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Simple Toggle interaction
+        const toggleBtns = document.querySelectorAll('.toggle-btn');
+        toggleBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                toggleBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
