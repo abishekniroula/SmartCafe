@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Cafe | Digital Menu</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo">Smart Cafe</div>
+            <ul class="nav-links">
+                <li><a href="#">Book Table</a></li>
+                <li><a href="#" class="active">Menu</a></li>
+                <li><a href="#">Offers</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <i data-lucide="search" class="icon-small"></i>
+                    <input type="text" placeholder="Search menu...">
+                </div>
+                <button class="icon-btn"><i data-lucide="bell"></i></button>
+                <button class="icon-btn"><i data-lucide="user"></i></button>
+                <button class="cart-btn"><i data-lucide="shopping-cart" class="icon-small"></i> Cart</button>
+            </div>
+        </nav>
+
+        <!-- Header -->
+        <header class="page-header">
+            <span class="subtitle">SEASONAL SELECTION</span>
+            <h1>Digital Menu</h1>
+            <p>Experience the heritage of artisanal cooking. Each dish is a curated dialogue<br>between local harvest
+                and modern culinary techniques.</p>
+        </header>
+
+        <!-- Categories -->
+        <div class="categories">
+            <button class="cat-btn active">ALL DAY</button>
+            <button class="cat-btn">STARTERS</button>
+            <button class="cat-btn">MAIN COURSE</button>
+            <button class="cat-btn">DESSERTS</button>
+            <button class="cat-btn">BEVERAGES</button>
+        </div>
+
+        <!-- Menu Grid -->
+        <main class="menu-grid">
+            <!-- Row 1: Large Card (2 columns) + Regular Card -->
+            <div class="large-card-wrapper">
+                <div class="large-image-block">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=500&auto=format&fit=crop"
+                        alt="Salad">
+                </div>
+                <div class="menu-card large-details-block">
+                    <div class="tags">
+                        <span class="tag">VEG</span>
+                        <span class="tag">GLUTEN-FREE</span>
+                    </div>
+                    <h2>Heirloom Burrata<br>Harvest Salad</h2>
+                    <p class="desc">Roasted organic heirloom tomatoes, hand-stretched burrata, house-made basil
+                        emulsion, and toasted pine kernels.</p>
+                    <div class="card-footer">
+                        <span class="price">Rs. 250</span>
+                        <button class="add-cart-btn">+ Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <article class="menu-card">
+                <div class="card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1633964913295-ceb43826e7cf?q=80&w=400&auto=format&fit=crop"
+                        alt="Risotto">
+                </div>
+                <div class="card-body">
+                    <div class="tags"><span class="tag">VEG</span></div>
+                    <h3>Wild Forest Risotto</h3>
+                    <p class="desc">Arborio rice slow-cooked with porcini, shiitake, and truffle essence. Finished with
+                        aged Grana Padano.</p>
+                    <div class="card-footer">
+                        <span class="price">Rs. 285</span>
+                        <button class="plus-btn"><i data-lucide="plus"></i></button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Row 2: 3 Regular Cards -->
+            <article class="menu-card">
+                <div class="card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=400&auto=format&fit=crop"
+                        alt="Ribeye">
+                </div>
+                <div class="card-body">
+                    <h3>30-Day Dry Aged Ribeye</h3>
+                    <p class="desc">Charcoal grilled, served with bone marrow jus, smoked sea salt, and roasted vine
+                        tomatoes.</p>
+                    <div class="card-footer">
+                        <span class="price">Rs. 550</span>
+                        <button class="plus-btn"><i data-lucide="plus"></i></button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="menu-card">
+                <div class="card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=400&auto=format&fit=crop"
+                        alt="Garden Bowl">
+                </div>
+                <div class="card-body">
+                    <div class="tags">
+                        <span class="tag">VEGAN</span>
+                        <span class="tag">GLUTEN-FREE</span>
+                    </div>
+                    <h3>Gokyo Garden Bowl</h3>
+                    <p class="desc">Quinoa, roasted seasonal roots, avocado mousse, and zesty lemon-tahini drizzle.</p>
+                    <div class="card-footer">
+                        <span class="price">Rs. 580</span>
+                        <button class="plus-btn"><i data-lucide="plus"></i></button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="menu-card">
+                <div class="card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=400&auto=format&fit=crop"
+                        alt="Elderflower Blush">
+                </div>
+                <div class="card-body">
+                    <h3>Elderflower Blush</h3>
+                    <p class="desc">Botanical infusion of elderflower, fresh raspberries, sparkling lime, and mint.</p>
+                    <div class="card-footer">
+                        <span class="price">Rs. 180</span>
+                        <button class="plus-btn"><i data-lucide="plus"></i></button>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <!-- Banner Section -->
+        <section class="banner">
+            <div class="banner-content">
+                <span class="subtitle" style="text-align: left; margin-bottom: 8px;">THE BEST SELLER</span>
+                <h2 class="banner-title">Curated Spirits &<br>Vintages</h2>
+
+                <div class="wine-list">
+                    <div class="wine-item">
+                        <div class="wine-info">
+                            <h4>House Cabernet Sauvignon</h4>
+                            <p>2018 Napa Valley Reserve</p>
+                        </div>
+                        <div class="wine-price">Rs. 4000</div>
+                    </div>
+                    <div class="wine-item">
+                        <div class="wine-info">
+                            <h4>Artisan Saffron Martini</h4>
+                            <p>Gin, house saffron syrup, dry vermouth</p>
+                        </div>
+                        <div class="wine-price">Rs. 3000</div>
+                    </div>
+                    <div class="wine-item">
+                        <div class="wine-info">
+                            <h4>Smoked Old Fashioned</h4>
+                            <p>Bourbon, maple, hickory smoke</p>
+                        </div>
+                        <div class="wine-price">Rs. 5000</div>
+                    </div>
+                </div>
+
+                <a href="#" class="view-link">View Full Wine List <i data-lucide="arrow-right"
+                        class="icon-small"></i></a>
+            </div>
+            <div class="banner-image">
+                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=800&auto=format&fit=crop"
+                    alt="Bar Shelf">
+                <div class="sommelier-badge">
+                    <span class="badge-title">SOMMELIER PICK</span>
+                    <span class="badge-year">SINCE 2015</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-left">
+                <div class="footer-logo">Smart Cafe</div>
+                <p>Crafting culinary memories through tradition,<br>passion, and the finest seasonal ingredients
+                    since<br>2012.</p>
+                <p class="copyright">&copy; 2024 Smart Cafe. The Modern Restro</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-col">
+                    <h4>CONNECT</h4>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Sustainability</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Reservations</a>
+                </div>
+                <div class="link-col">
+                    <h4>LEGAL</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
