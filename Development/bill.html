@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>Bill Generation</title>
+  <link rel="stylesheet" href="bill.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <h2>Gokyo Bistro</h2>
+    <nav>
+      <a href="#">Book Table</a>
+      <a href="#">Menu</a>
+      <a href="#">Offers</a>
+    </nav>
+    <button class="cart-btn">🛒 Cart</button>
+  </header>
+
+  <main class="container">
+
+    <!-- LEFT SIDE -->
+    <section class="left">
+
+      <h4 class="sub-title">TRANSACTION TERMINAL</h4>
+      <h1 style="margin-bottom: 10px;">Bill Generation</h1>
+      <p class="meta">Table 14 • Server: Chahana • Order #GK-88</p>
+
+      <!-- Info Cards -->
+      <div class="info-row">
+        <div class="info-card" >
+          <button class="icon-btn">
+            <i class="fa-regular fa-calendar"></i>
+          </button>
+          <div >
+             <p class="label">DATE & TIME</p>
+             <p>Mar 24, 2026 • 07:42</p>
+          </div>
+        </div>
+          
+
+         <div class="info-card" >
+          <button class="icon-btn">
+            <i class="fa-regular fa-user"></i>
+          </button>
+          <div >
+           <p class="label">GUESTS</p>
+           <p>4 Adults</p>
+          </div>
+        </div>
+       
+      </div>
+
+      <!-- Order Table -->
+      <div class="card">
+        <h3>Order Details</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Qty</th>
+              <th>Price</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Gokyo Signature Yakitori</td>
+              <td>2</td>
+              <td>Rs. 240</td>
+              <td>Rs. 480</td>
+            </tr>
+
+            <tr>
+              <td>Wild Mushroom Risotto</td>
+              <td>1</td>
+              <td>Rs. 320</td>
+              <td>Rs. 320</td>
+            </tr>
+
+            <tr>
+              <td>A5 Wagyu Steak</td>
+              <td>1</td>
+              <td>Rs. 1150</td>
+              <td>Rs. 1150</td>
+            </tr>
+
+            <tr>
+              <td>Vintage Merlot</td>
+              <td>1</td>
+              <td>Rs. 850</td>
+              <td>Rs. 850</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Advance -->
+      <div class="advance">
+        <p>Advance Deposit Detected</p>
+        <span>-Rs. 500</span>
+      </div>
+
+    </section>
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+      <div class="bill-card">
+       
+        <h2>Gokyo Bistro</h2>
+        <p class="tag">THE MODERN RESTRO</p>
+
+        <div class="bill-row">
+          <span>Subtotal</span>
+          <span>Rs. 2800</span>
+        </div>
+
+        <div class="bill-row">
+          <span>Service Charge (10%)</span>
+          <span>Rs. 280</span>
+        </div>
+
+        <div class="bill-row">
+          <span>VAT (8%)</span>
+          <span>Rs. 224</span>
+        </div>
+
+        <div class="bill-row green">
+          <span>Advance Deduction</span>
+          <span>-Rs. 500</span>
+        </div>
+
+        <hr />
+
+        <div class="total">
+          <h1>Rs. 2804</h1>
+        </div>
+
+        <button class="primary-btn">Print Bill</button>
+        <button class="secondary-btn">Email Receipt</button>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</body>
+</html>
