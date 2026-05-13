@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gokyo Bistro Cart</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+body{
+    background:#f7f4f1;
+    color:#2d2d2d;
+}
+header{
+    background:#fff;
+    height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 30px;
+    border-bottom:1px solid #e6dfd8;
+}
+.logo{
+    font-size:18px;
+    color:#9f4f2b;
+    font-weight:600;
+}
+nav{
+    display:flex;
+    gap:40px;
+}
+nav a{
+    text-decoration:none;
+    color:#444;
+    font-size:14px;
+    letter-spacing:1px;
+}
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+.icon{
+    font-size:20px;
+    color:#9f4f2b;
+}
+.cart-btn{
+    background:#9f4f2b;
+    color:white;
+    padding:12px 22px;
+    border-radius:10px;
+    font-size:16px;
+}
+.container{
+    max-width:1300px;
+    margin:50px auto;
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:40px;
+    padding:0 20px;
+}
+.left h1{
+    font-size:56px;
+    font-weight:300;
+}
+.left p{
+    margin-top:10px;
+    color:#666;
+    font-size:22px;
+}
+.empty-cart{
+    text-align:right;
+    color:#d44432;
+    margin:20px 0;
+    font-size:18px;
+}
+.cart-item{
+    background:#fff;
+    border-radius:25px;
+    padding:22px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:25px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.03);
+}
+.item-left{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+.item-left img{
+    width:95px;
+    height:95px;
+    border-radius:18px;
+    object-fit:cover;
+}
+.item-details h3{
+    font-size:30px;
+    font-weight:400;
+}
+.item-details p{
+    font-size:18px;
+    color:#666;
+    margin:8px 0;
+}
+.price-row{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+.item-price{
+    color:#9f4f2b;
+    font-size:28px;
+}
+.qty{
+    background:#f1efed;
+    border-radius:25px;
+    display:flex;
+    align-items:center;
+    padding:8px 18px;
+    gap:20px;
+    font-size:24px;
+}
+.total-price{
+    font-size:36px;
+}
+.add-more{
+    margin-top:30px;
+    color:#9f4f2b;
+    font-size:18px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+.summary{
+    background:#f4f0ed;
+    border-radius:28px;
+    padding:30px;
+    height:fit-content;
+}
+.summary h2{
+    font-size:40px;
+    font-weight:300;
+    margin-bottom:30px;
+}
+.summary-row{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+    font-size:20px;
+    color:#555;
+}
+.discount{
+    color:#6d8a5c;
+}
+hr{
+    border:none;
+    border-top:1px solid #ddd;
+    margin:25px 0;
+}
+.total-due{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+.total-due span:first-child{
+    font-size:22px;
+    font-weight:600;
+}
+.total-due span:last-child{
+    font-size:42px;
+    color:#9f4f2b;
+}
+.checkout{
+    width:100%;
+    background:#9f4f2b;
+    color:#fff;
+    padding:20px;
+    border:none;
+    border-radius:18px;
+    font-size:24px;
+    margin-bottom:20px;
+}
+.secure{
+    text-align:center;
+    color:#666;
+    font-size:16px;
+}
+.complete{
+    margin-top:35px;
+    font-size:16px;
+    letter-spacing:1px;
+    color:#777;
+}
+.pick{
+    background:white;
+    border-radius:18px;
+    padding:15px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:15px;
+}
+.pick-left{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+.pick img{
+    width:50px;
+    height:50px;
+    border-radius:8px;
+}
+.note{
+    margin-top:20px;
+    font-size:15px;
+    color:#666;
+}
+footer{
+    background:#f3efec;
+    margin-top:70px;
+    padding:50px 80px;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:50px;
+}
+footer h3{
+    color:#9f4f2b;
+    margin-bottom:20px;
+}
+footer p{
+    color:#666;
+    margin-bottom:14px;
+    line-height:1.6;
+}
+@media(max-width:1000px){
+    .container{
+        grid-template-columns:1fr;
+    }
+    .left h1{
+        font-size:40px;
+    }
+    .item-details h3{
+        font-size:22px;
+    }
+    .total-price{
+        font-size:24px;
+    }
+    footer{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Gokyo Bistro</div>
+    <nav>
+        <a href="#">BOOK TABLE</a>
+        <a href="#">MENU</a>
+        <a href="#">OFFERS</a>
+    </nav>
+    <div class="header-right">
+        <div class="icon">🔔</div>
+        <div class="icon">👤</div>
+        <div class="cart-btn">🛒 Cart (3)</div>
+    </div>
+</header>
+
+<div class="container">
+
+    <div class="left">
+        <h1>Your Selection</h1>
+        <p>Review your items before we prepare your table.</p>
+
+        <div class="empty-cart">🗑 Empty Cart</div>
+
+        <div class="cart-item">
+            <div class="item-left">
+                <img src="https://images.unsplash.com/photo-1626776876729-bab4369a5a5f" alt="">
+                <div class="item-details">
+                    <h3>Spicy Yak Momo</h3>
+                    <p>Traditional steamed dumplings with Sichuan pepper sauce</p>
+                    <div class="price-row">
+                        <div class="item-price">Rs. 700</div>
+                        <div class="qty">− 2 +</div>
+                    </div>
+                </div>
+            </div>
+            <div class="total-price">Rs. 1400</div>
+        </div>
+
+        <div class="cart-item">
+            <div class="item-left">
+                <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d" alt="">
+                <div class="item-details">
+                    <h3>Signature Thali</h3>
+                    <p>A curated journey of lentils, curries, and smoked preserves</p>
+                    <div class="price-row">
+                        <div class="item-price">Rs. 850</div>
+                        <div class="qty">− 1 +</div>
+                    </div>
+                </div>
+            </div>
+            <div class="total-price">Rs. 850</div>
+        </div>
+
+        <div class="cart-item">
+            <div class="item-left">
+                <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e" alt="">
+                <div class="item-details">
+                    <h3>Everest Sunset Cocktail</h3>
+                    <p>Gin-based with sea buckthorn and Himalayan salt</p>
+                    <div class="price-row">
+                        <div class="item-price">Rs. 450</div>
+                        <div class="qty">− 1 +</div>
+                    </div>
+                </div>
+            </div>
+            <div class="total-price">Rs. 450</div>
+        </div>
+
+        <div class="add-more">← Add More Items From Menu</div>
+    </div>
+
+    <div>
+        <div class="summary">
+            <h2>Order Summary</h2>
+
+            <div class="summary-row">
+                <span>SUBTOTAL</span>
+                <span>Rs. 2700</span>
+            </div>
+
+            <div class="summary-row">
+                <span>KITCHEN SERVICE FEE</span>
+                <span>Rs. 200</span>
+            </div>
+
+            <div class="summary-row discount">
+                <span>RESERVATION DISCOUNT</span>
+                <span>Rs. 100</span>
+            </div>
+
+            <hr>
+
+            <div class="total-due">
+                <span>TOTAL DUE</span>
+                <span>Rs. 2800</span>
+            </div>
+
+            <button class="checkout">Proceed to Checkout</button>
+
+            <div class="secure">🛡 Secure Payment via Stripe</div>
+
+            <hr>
+
+            <div class="complete">COMPLETE THE EXPERIENCE</div>
+
+            <div class="pick">
+                <div class="pick-left">
+                    <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b" alt="">
+                    <div>
+                        <strong>House Sommelier’s Pick</strong>
+                        <p>Add a bottle of Sula Shiraz</p>
+                    </div>
+                </div>
+                <div>⊕</div>
+            </div>
+        </div>
+
+        <div class="note">
+            🌿 Gokyo Bistro uses biodegradable packaging and supports sustainable yak farming in the Mustang region.
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <div>
+        <h3>Gokyo Bistro</h3>
+        <p>© 2024 Gokyo Bistro. The Modern Restro</p>
+        <p>Authentic Himalayan flavors reimagined for the contemporary palate.</p>
+    </div>
+
+    <div>
+        <h3>EXPLORE</h3>
+        <p>Menu</p>
+        <p>Sustainability</p>
+        <p>Our Story</p>
+    </div>
+
+    <div>
+        <h3>CONTACT & SUPPORT</h3>
+        <p>Contact Us</p>
+        <p>Privacy Policy</p>
+        <p>Terms of Service</p>
+    </div>
+</footer>
+
+</body>
+</html>
