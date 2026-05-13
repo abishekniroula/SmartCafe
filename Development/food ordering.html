@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Ordering UI</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#f7f4f1;color:#2b2b2b}
+.header{height:80px;background:#fff;border-bottom:1px solid #e5ddd6;display:flex;align-items:center;justify-content:space-between;padding:0 30px;position:sticky;top:0;z-index:10}
+.logo{font-size:32px;font-family:Georgia,serif;color:#9a4f2e;font-weight:bold}
+.nav{display:flex;gap:35px}.nav a{text-decoration:none;color:#444;font-weight:600}.nav a.active{color:#9a4f2e;border-bottom:3px solid #9a4f2e;padding-bottom:8px}
+.actions{display:flex;gap:15px;align-items:center}.search{padding:14px 20px;border:none;background:#f2eeea;border-radius:30px;width:240px}.cart{background:#9a4f2e;color:#fff;padding:14px 22px;border-radius:16px}
+.container{display:grid;grid-template-columns:280px 1fr}
+.sidebar{background:#f3efeb;padding:25px;min-height:100vh;border-right:1px solid #e2d9d0}.small{font-size:12px;color:#857a71;letter-spacing:1px;text-transform:uppercase;margin-bottom:15px}.toggle{display:flex;background:#e8e1db;padding:5px;border-radius:30px}.toggle span{flex:1;text-align:center;padding:12px;border-radius:25px;font-weight:600}.toggle .active{background:#fff;color:#9a4f2e}.categories{margin-top:30px;display:flex;flex-direction:column;gap:10px}.cat{padding:16px 18px;border-radius:18px;font-weight:600}.cat.active{background:#dcead5;color:#35552b}.promo{margin-top:35px;background:#111;color:#fff;border-radius:24px;padding:25px;height:220px;display:flex;flex-direction:column;justify-content:end}
+.main{padding:30px}.hero h1{font-size:56px;font-family:Georgia,serif}.hero p{margin-top:10px;color:#6d655f;max-width:700px;line-height:1.6}.grid{margin-top:30px;display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.card{background:#fff;border-radius:24px;overflow:hidden;border:1px solid #eee;box-shadow:0 5px 20px rgba(0,0,0,.05)}.card img{width:100%;height:220px;object-fit:cover}.content{padding:20px}.top{display:flex;justify-content:space-between;gap:10px}.title{font-family:Georgia,serif;font-size:24px;font-weight:700}.price{color:#9a4f2e;font-weight:700}.desc{margin:14px 0;color:#6d655f;line-height:1.5;min-height:70px}.btn{display:block;width:100%;padding:15px;text-align:center;background:#f1ece8;border-radius:14px;font-weight:700}
+.footer{margin-top:50px;padding:35px;border-top:1px solid #e0d7cf;display:grid;grid-template-columns:2fr 1fr 1fr 2fr;gap:20px;color:#6d655f}.footer h4{margin-bottom:14px;color:#333}.newsletter{padding:14px;border:none;background:#f2eeea;border-radius:14px;width:100%}
+@media(max-width:1100px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.container{grid-template-columns:1fr}.sidebar{display:none}.grid{grid-template-columns:1fr}.hero h1{font-size:40px}.search{display:none}}
+</style>
+</head>
+<body>
+<header class="header">
+<div class="logo">Gokyo Bistro</div>
+<nav class="nav">
+<a href="#">Book Table</a>
+<a href="#" class="active">Menu</a>
+<a href="#">Offers</a>
+</nav>
+<div class="actions">
+<input class="search" placeholder="Search menu...">
+<div class="cart">Cart</div>
+</div>
+</header>
+<div class="container">
+<aside class="sidebar">
+<div class="small">Service Type</div>
+<div class="toggle"><span class="active">Dine-in</span><span>Delivery</span></div>
+<div class="small" style="margin-top:30px;">Categories</div>
+<div class="categories">
+<div class="cat active">Mains</div><div class="cat">Appetizers</div><div class="cat">Desserts</div><div class="cat">Beverages</div>
+</div>
+<div class="promo"><h3>Chef's Special</h3><p>Try our Himalayan Ribeye</p></div>
+</aside>
+<main class="main">
+<section class="hero">
+<h1>Mains <span style="font-size:18px;color:#857a71;">22 ITEMS</span></h1>
+<p>Refined Himalayan-inspired main courses, crafted with locally sourced organic ingredients and traditional spices.</p>
+</section>
+<section class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591"><div class="content"><div class="top"><div class="title">Margherita Pizza</div><div class="price">Rs. 700</div></div><div class="desc">Classic pizza with mozzarella and basil.</div><div class="btn">Add to Cart</div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd"><div class="content"><div class="top"><div class="title">Beef Burger</div><div class="price">Rs. 650</div></div><div class="desc">Juicy beef burger with crispy fries.</div><div class="btn">Add to Cart</div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1557872943-16a5ac26437e"><div class="content"><div class="top"><div class="title">Spicy Ramen</div><div class="price">Rs. 580</div></div><div class="desc">Rich ramen broth with spicy toppings.</div><div class="btn">Add to Cart</div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398"><div class="content"><div class="top"><div class="title">Butter Chicken</div><div class="price">Rs. 690</div></div><div class="desc">Creamy chicken curry served hot.</div><div class="btn">Add to Cart</div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1645112411341-6c4fd023714a"><div class="content"><div class="top"><div class="title">Chicken Pasta</div><div class="price">Rs. 620</div></div><div class="desc">Creamy alfredo pasta with grilled chicken.</div><div class="btn">Add to Cart</div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1576777647209-e8733d7b851d"><div class="content"><div class="top"><div class="title">Fish & Chips</div><div class="price">Rs. 530</div></div><div class="desc">Golden crispy fish with fresh fries.</div><div class="btn">Add to Cart</div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2"><div class="content"><div class="top"><div class="title">BBQ Wings</div><div class="price">Rs. 470</div></div><div class="desc">Sticky smoky chicken wings.</div><div class="btn">Add to Cart</div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1513456852971-30c0b8199d4d"><div class="content"><div class="top"><div class="title">Loaded Nachos</div><div class="price">Rs. 430</div></div><div class="desc">Crunchy nachos with cheese and jalapeños.</div><div class="btn">Add to Cart</div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af"><div class="content"><div class="top"><div class="title">Club Sandwich</div><div class="price">Rs. 410</div></div><div class="desc">Triple-layer sandwich with fresh fillings.</div><div class="btn">Add to Cart</div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1546793665-c74683f339c1"><div class="content"><div class="top"><div class="title">Caesar Salad</div><div class="price">Rs. 390</div></div><div class="desc">Fresh romaine lettuce with parmesan.</div><div class="btn">Add to Cart</div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb"><div class="content"><div class="top"><div class="title">Lava Cake</div><div class="price">Rs. 350</div></div><div class="desc">Warm chocolate cake with molten center.</div><div class="btn">Add to Cart</div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad"><div class="content"><div class="top"><div class="title">Cheesecake</div><div class="price">Rs. 380</div></div><div class="desc">Creamy cheesecake with strawberries.</div><div class="btn">Add to Cart</div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b"><div class="content"><div class="top"><div class="title">Veg Fried Rice</div><div class="price">Rs. 420</div></div><div class="desc">Wok tossed rice with vegetables.</div><div class="btn">Add to Cart</div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d"><div class="content"><div class="top"><div class="title">Roast Chicken</div><div class="price">Rs. 800</div></div><div class="desc">Tender roast chicken with herbs.</div><div class="btn">Add to Cart</div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371"><div class="content"><div class="top"><div class="title">Risotto</div><div class="price">Rs. 450</div></div><div class="desc">Creamy arborio rice with mushrooms.</div><div class="btn">Add to Cart</div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288"><div class="content"><div class="top"><div class="title">Trout</div><div class="price">Rs. 550</div></div><div class="desc">Pan-seared trout with lemon butter.</div><div class="btn">Add to Cart</div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1623065422902-30a2d299bbe4"><div class="content"><div class="top"><div class="title">Mango Smoothie</div><div class="price">Rs. 260</div></div><div class="desc">Fresh tropical mango drink.</div><div class="btn">Add to Cart</div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735"><div class="content"><div class="top"><div class="title">Iced Mocha</div><div class="price">Rs. 240</div></div><div class="desc">Refreshing chilled coffee drink.</div><div class="btn">Add to Cart</div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8"><div class="content"><div class="top"><div class="title">Paneer Tikka</div><div class="price">Rs. 520</div></div><div class="desc">Spiced grilled paneer cubes.</div><div class="btn">Add to Cart</div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1626776876729-bab4369a5a5f"><div class="content"><div class="top"><div class="title">Momos</div><div class="price">Rs. 460</div></div><div class="desc">Hand-folded dumplings with chutney.</div><div class="btn">Add to Cart</div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1544025162-d76694265947"><div class="content"><div class="top"><div class="title">Braised Yak</div><div class="price">Rs. 2000</div></div><div class="desc">Tender braised yak meat.</div><div class="btn">Add to Cart</div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1546793665-c74683f339c1"><div class="content"><div class="top"><div class="title">Garden Bowl</div><div class="price">Rs. 480</div></div><div class="desc">Healthy bowl with fresh vegetables.</div><div class="btn">Add to Cart</div></div></div>
+</section>
+<footer class="footer">
+<div><h3>Gokyo Bistro</h3><p>Experience the peak of culinary artistry.</p></div>
+<div><h4>Explore</h4><p>Contact Us</p><p>Sustainability</p></div>
+<div><h4>Legal</h4><p>Privacy Policy</p><p>Terms</p></div>
+<div><h4>Newsletter</h4><input class="newsletter" placeholder="Your email address"></div>
+</footer>
+</main>
+</div>
+</body>
+</html>
