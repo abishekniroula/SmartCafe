@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers & Feedback - Smart Cafe</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-coffee"></i>
+                <span>Smart Cafe</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#offers" class="nav-link">Offers</a></li>
+                <li><a href="#feedback" class="nav-link">Feedback</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner Section -->
+    <header id="home" class="hero-banner">
+        <div class="banner-content">
+            <img src="images/banner.jpg" alt="Smart Cafe Banner" class="banner-img">
+            <div class="banner-overlay">
+                <h1>Welcome to Smart Cafe</h1>
+                <p>Discover Amazing Offers & Share Your Feedback</p>
+                <a href="#offers" class="btn btn-primary">Explore Offers</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Offers Section -->
+        <section id="offers" class="offers-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Special Offers</h2>
+                    <p>Check out our amazing deals and exclusive discounts</p>
+                </div>
+
+                <div class="offers-grid">
+                    <!-- Offer Card 1 -->
+                    <article class="offer-card">
+                        <div class="card-image">
+                            <img src="images/offer1.jpg" alt="50% Off Coffee">
+                            <div class="discount-badge">50% OFF</div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Premium Coffee Deal</h3>
+                            <p>Get 50% discount on all premium coffee varieties. Valid till end of month.</p>
+                            <div class="card-footer">
+                                <span class="price">Was $10 → Now $5</span>
+                                <button class="btn btn-secondary">Claim Offer</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Offer Card 2 -->
+                    <article class="offer-card">
+                        <div class="card-image">
+                            <img src="images/offer2.jpg" alt="Buy 1 Get 1">
+                            <div class="discount-badge">BOGO</div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Buy One Get One Free</h3>
+                            <p>Purchase any pastry and get another one absolutely free. Limited time offer.</p>
+                            <div class="card-footer">
+                                <span class="price">Popular Choice</span>
+                                <button class="btn btn-secondary">Claim Offer</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feedback Section -->
+        <section id="feedback" class="feedback-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Share Your Feedback</h2>
+                    <p>We love hearing from our customers. Help us improve!</p>
+                </div>
+
+                <form id="feedbackForm" class="feedback-form" novalidate>
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            placeholder="Enter your full name" 
+                            required
+                        >
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Enter your email address" 
+                            required
+                        >
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rating">Rating *</label>
+                        <select id="rating" name="rating" required>
+                            <option value="">Select a rating</option>
+                            <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                            <option value="4">⭐⭐⭐⭐ Good</option>
+                            <option value="3">⭐⭐⭐ Average</option>
+                            <option value="2">⭐⭐ Poor</option>
+                            <option value="1">⭐ Very Poor</option>
+                        </select>
+                        <span class="error-message" id="ratingError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            rows="5" 
+                            placeholder="Share your thoughts and feedback..." 
+                            required
+                        ></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-submit">Submit Feedback</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Smart Cafe</h4>
+                <p>Your favorite coffee destination for quality brews and great vibes.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#offers">Offers</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Smart Cafe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
